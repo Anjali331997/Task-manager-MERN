@@ -9,3 +9,5 @@ const Header = () => {
 }
 
 export default Header
+
+// icons and Profile, when clicken on profile show a modal with all the user data and logout option
