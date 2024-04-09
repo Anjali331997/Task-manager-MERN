@@ -6,7 +6,5 @@ router.get('/',(req,res)=>{
 res.send("task routes are working")
 })
 
-//sign-up
-//login-up
 
 module.exports=router

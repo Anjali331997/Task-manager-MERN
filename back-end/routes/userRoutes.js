@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
     res.send("USer routes are working")
 })
 
-
 //sign-up
 router.post('/register', async (req, res) => {
 
@@ -22,6 +21,7 @@ router.post('/register', async (req, res) => {
         res.status(400).send({ error: err })
     }
 })
+
 //login-up
 router.post('/login', async (req, res) => {
     try {
@@ -40,6 +40,7 @@ router.post('/login', async (req, res) => {
         const token = jwt.sign({
             _id: user._id.toString()
         }, process.env.JWT_SECRET_KEY)
+        
         res.send({ user, token });
     } catch (err) {
         res.status(400).send({ error: err })
