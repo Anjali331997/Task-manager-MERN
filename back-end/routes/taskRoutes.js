@@ -67,23 +67,26 @@ router.patch('/:id', auth, async (req, res) => {
     const taskid = req.params.id
     const updates = req.body;
     const allowedUpdated = ['description', 'completed'];
+    {
+        //The every() method executes a function for each array element.
+        //The every() method returns true if the function returns true for all elements.
+        //The every() method returns false if the function returns false for one element.
 
-    //The every() method executes a function for each array element.
-    //The every() method returns true if the function returns true for all elements.
-    //The every() method returns false if the function returns false for one element.
-    
-    //we are checking if every element in the updates array in present in alloweupdated arrays
-    
-    const isValidOperation = updates.every(ele => allowedUpdated.includes(ele))
+        //we are checking if every element in the updates array in present in alloweupdated arrays
+    }
+    const isValidOperation = updates.every(ele => allowedUpdated.includes(ele));
+
+    if (!isValidOperation) {
+        res.status(404).send({ Error: "Invalid updates" })
+    }
     try {
-
-        const task = await Task.findOne({ _id: taskid, owner: req.user._id })
+        const task = await Task.findOneAndUpdate({ taskid }, updates)
         if (!task) {
-            res.status(404).json({ message: "Task not found" })
+            res.status(404).json({ Error: "Task not found" })
         }
-        else {
-            res.status(200).json({ task })
-        }
+
+        res.status(200).json({ task, message: "Task successfullt updatedd" })
+
 
     } catch (error) {
         res.status(404).send({ error: error.meassage })
