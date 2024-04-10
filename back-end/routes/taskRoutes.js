@@ -32,5 +32,16 @@ router.post('/', auth, async (req, res) => {
     }
 })
 
+//get the tasks
+router.get('/', auth, async (req, res) => {
+    try {
+        const tasks =await Task.find({ owner: req.user._id })
+        res.status(200).send({ tasks })
+    } catch (error) {
+        res.status(404).send({ error: error.meassage })
+        console.log(error.message)
+    }
+})
+
 
 module.exports = router
