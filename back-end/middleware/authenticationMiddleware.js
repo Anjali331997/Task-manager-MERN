@@ -6,7 +6,7 @@ const authMiddleware = async (req, res, next) => {
         const token = req.header('Authorization').replace('Bearer ', '');
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
 
-        const user = await UserModel.find({ _id: decoded._id });
+        const user = await UserModel.findOne({ _id: decoded._id });
         if (!user) {
             throw new Error('Unable to find access, Please login');
         }

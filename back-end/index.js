@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json())
 app.use(express.json())
 app.use('/users',userRouter)
-app.use('/task',taskRouter)
+app.use('/tasks',taskRouter)
 
 //routes
 app.get('/',(req,res)=>{

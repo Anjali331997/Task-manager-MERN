@@ -43,6 +43,7 @@ router.post('/login', async (req, res) => {
         }, process.env.JWT_SECRET_KEY)
         
         res.send({ user, token });
+    
     } catch (err) {
         res.status(400).send({ error: err })
     }

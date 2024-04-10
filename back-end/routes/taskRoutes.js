@@ -12,6 +12,7 @@ router.get('/test', (req, res) => {
 
 //create a task
 router.post('/', auth, async (req, res) => {
+
     try {
         //description,complted from req.body
         //try to get owner:req.user._id
@@ -27,6 +28,7 @@ router.post('/', auth, async (req, res) => {
     }
     catch (error) {
         res.status(400).send({ error: error.message })
+        console.log(error.message)
     }
 })
 
