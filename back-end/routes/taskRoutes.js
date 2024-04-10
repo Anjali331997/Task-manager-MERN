@@ -62,6 +62,9 @@ router.get('/:id', auth, async (req, res) => {
     }
 })
 
+//update a task
+
+
 
 
 module.exports = router
