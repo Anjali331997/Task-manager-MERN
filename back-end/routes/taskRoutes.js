@@ -95,6 +95,11 @@ router.patch('/:id', auth, async (req, res) => {
     }
 })
 
+//delete a task 
+router.delete('/:id',auth, async (req,res)=>{
+    
+})
+
 
 
 module.exports = router
