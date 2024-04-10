@@ -15,7 +15,6 @@ router.post('/', auth, async (req, res) => {
     try {
         //description,complted from req.body
         //try to get owner:req.user._id
-
         const task = new Task({
             ...req.body,
             owner: req.user._id
