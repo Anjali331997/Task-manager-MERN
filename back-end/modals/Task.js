@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
-    description: { typpe: String, required: true },
+    description: { type: String, required:true },
     completed: { type: Boolean, default: false },
     owner: {
         type: mongoose.Schema.Types.ObjectId,
