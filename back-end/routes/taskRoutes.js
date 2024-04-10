@@ -43,5 +43,25 @@ router.get('/', auth, async (req, res) => {
     }
 })
 
+//get a task by id
+router.get('/:id', auth, async (req, res) => {
+    const taskid = req.params.id
+    try {
+
+        const task = await Task.findOne({_id:taskid,owner:req.user._id})
+        if(!task){
+            res.status(404).json({message:"Task not found"})
+        }
+        else{
+            res.status(200).json({task})
+        }
+        
+    } catch (error) {
+        res.status(404).send({ error: error.meassage })
+        console.log(error.message)
+    }
+})
+
+
 
 module.exports = router
