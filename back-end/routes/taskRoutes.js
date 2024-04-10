@@ -65,7 +65,8 @@ router.get('/:id', auth, async (req, res) => {
 //update a task - can updated the description and completed field
 router.patch('/:id', auth, async (req, res) => {
     const taskid = req.params.id
-    const updates = req.body;
+    const updates = Object.keys(req.body);
+    // console.log(req.body);
     const allowedUpdated = ['description', 'completed'];
     {
         //The every() method executes a function for each array element.
@@ -80,16 +81,16 @@ router.patch('/:id', auth, async (req, res) => {
         res.status(404).send({ Error: "Invalid updates" })
     }
     try {
-        const task = await Task.findOneAndUpdate({ taskid }, updates)
+        const task = await Task.findOneAndUpdate({ _id:taskid }, req.body,{new:true})
+        console.log(task)
         if (!task) {
             res.status(404).json({ Error: "Task not found" })
         }
 
         res.status(200).json({ task, message: "Task successfullt updatedd" })
 
-
     } catch (error) {
-        res.status(404).send({ error: error.meassage })
+        res.status(500).send({ error: error.meassage })
         console.log(error.message)
     }
 })
