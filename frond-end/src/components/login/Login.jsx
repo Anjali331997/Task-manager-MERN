@@ -6,6 +6,7 @@ const Login = () => {
         <h2>Login</h2>
         <input type='email' placeholder='username@email.com'/>
         <input type='password' placeholder='password'/>
+        <input type="submit" value={"Login"} />
     </from>
   )
 }
