@@ -5,7 +5,9 @@ const Landing = () => {
   return (
     <div className='landing_div'>
       <div className="image_svg"></div>
-      <div className="signup_login"></div>
+      <div className="signup_login">
+        
+      </div>
     </div>
   )
 }
