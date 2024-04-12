@@ -18,8 +18,8 @@ const AddTaskbutton = () => {
       <Button variant="primary"
         onClick={handleShow}
         style={{
-          backgroundColor: "var(--violet)",
-          color: "var(--black)",
+          backgroundColor: "var(--pink)",
+          color: "var(--violet)",
           fontWeight: "500",
           border: "0px"
         }}>
