@@ -16,13 +16,11 @@
 }
 
 .signup_login form{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
     margin: auto;
-    /* background-color: red; */
     border: 1px rgb(14, 30, 177) solid;
 }
 

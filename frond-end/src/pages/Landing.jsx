@@ -19,7 +19,7 @@ const Landing = () => {
 
         {showSignup ? <Signup /> : <Login />}
 
-        <button onClick={toggleForm}>
+        <button onClick={toggleForm} className='togglebutton'>
           {showSignup ? "Log In" : "Sign Up"}
         </button>
       </div>
