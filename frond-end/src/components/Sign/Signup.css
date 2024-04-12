@@ -2,15 +2,16 @@ input{
     border-radius: 10px;
     padding: 5px;
     height: 40px;
-    border: 1px solid blueviolet;
+    border: 1px solid var(--violet);
 }
 
 .header-signup{
-    color: blueviolet;
+    color: var(--violet);
 }
 
 form input:last-child{
-    background-color: rgb(138,156,107);
-    color:black;
+    background-color: var(--green);
+    color:var(--black);
     font-weight: 600;
+    border: 0;
 }
