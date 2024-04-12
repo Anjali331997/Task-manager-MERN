@@ -1,0 +1,7 @@
+export const ActionTypes = {
+    CREATE_USER: "CREATE_USER",
+    LOGIN_USER: "LOGIN_USER",
+    GET_TASK: "GET_TASK",
+    ADD_TASK: "ADD_TASK",
+    DELETE_TASK: "DELETE_TASK"
+}
