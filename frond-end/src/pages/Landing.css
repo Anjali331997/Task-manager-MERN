@@ -1,4 +1,4 @@
-.landing_div{
+.landing_div {
     border: 1px rgb(75, 214, 71) solid;
     display: flex;
     flex-direction: row;
@@ -7,14 +7,14 @@
     height: 100vh;
 }
 
-.image_div{
+.image_div {
     border: 1px rgb(14, 168, 196) solid;
     width: 60%;
     padding: 20px;
     display: flex;
 }
 
-.image_div img{
+.image_div img {
     width: 70%;
     object-fit: contain;
     object-position: center;
@@ -24,25 +24,28 @@
 }
 
 
-.signup_login{
+.signup_login {
     border: 1px purple solid;
-     width: 40%;
-     padding: 20px;
-     display: flex;
-     flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.signup_login form{
+.signup_login form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: auto;
+    /* margin: auto; */
     border: 1px rgb(14, 30, 177) solid;
 }
 
-.signup_login button{
-    border: 0px;
-    margin: 0;
+.togglebutton {
+    /* border: 0px; */
+    margin-bottom: 30%;
+    margin-top: 0px;
+    padding: 10px;
+    height: 30px;
+    border: 10px;
 }
-
