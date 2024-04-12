@@ -12,9 +12,13 @@ const Landing = () => {
   };
   return (
     <div className='landing_div'>
-      <div className="image_svg"></div>
+      <div className="image_svg">
+        <img src="" alt="" />
+      </div>
       <div className="signup_login">
+
         {showSignup ? <Signup /> : <Login />}
+
         <button onClick={toggleForm}>
           {showSignup ? "Log In" : "Sign Up"}
         </button>
