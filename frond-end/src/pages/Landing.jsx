@@ -12,8 +12,8 @@ const Landing = () => {
   };
   return (
     <div className='landing_div'>
-      <div className="image_svg">
-        <img src="" alt="" />
+      <div className="image_div">
+        <img src='https://i.postimg.cc/3w2rYVRM/Untitled-design.pngg' alt="" />
       </div>
       <div className="signup_login">
 
