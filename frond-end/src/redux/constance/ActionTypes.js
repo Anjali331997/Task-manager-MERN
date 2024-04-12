@@ -3,5 +3,6 @@ export const ActionTypes = {
     LOGIN_USER: "LOGIN_USER",
     GET_TASK: "GET_TASK",
     ADD_TASK: "ADD_TASK",
-    DELETE_TASK: "DELETE_TASK"
+    DELETE_TASK: "DELETE_TASK",
+    EDIT_TASK: "EDIT_TASK"
 }
