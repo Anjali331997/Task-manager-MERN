@@ -1,0 +1,35 @@
+.header {
+    background-color: var(--violet);
+    color: var(--black);
+
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 30px;
+}
+
+.profile img {
+    width: 40px;
+    border-radius: 40px;
+
+}
+
+.profile {
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+}
+
+.profile p {
+    margin: 0;
+}
+
+.header_name h4 {
+    margin: 0;
+}
+
+.header_name {
+    display: flex;
+    align-items: center;
+}
