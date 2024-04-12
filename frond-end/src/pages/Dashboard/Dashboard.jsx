@@ -1,12 +1,15 @@
 import React from 'react'
 import './Dashboard.css'
 import AddTaskbutton from '../../components/addTaskButton/AddTaskbutton'
+import Header from '../../components/Header/Header'
+
 
 const Dashboard = () => {
   return (
-    <div>
-        <AddTaskbutton/>
-    </div>
+    <>
+      <Header />
+      <AddTaskbutton />
+    </>
   )
 }
 
