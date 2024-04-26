@@ -6,7 +6,9 @@ import Signup from '../../components/Sign/Signup'
 
 
 const Landing = () => {
+  
   const [showSignup, setShowSignup] = useState(true)
+
   const toggleForm = () => {
     setShowSignup(!showSignup);
   };
