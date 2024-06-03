@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { AddTask } from '../../pages/AddTask/AddTask'
+import {AddTask} from '../AddTask/AddTask'
 
 const AddTaskbutton = () => {
   const [showModal, setShowModal] = useState(false);

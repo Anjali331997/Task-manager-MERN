@@ -8,7 +8,7 @@ const Dashboard = () => {
   return (
     <>
       <Header />
-      {/* <AddTaskbutton /> */}
+      <AddTaskbutton />
     </>
   )
 }
